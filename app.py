@@ -6,6 +6,7 @@ df = px.data.iris()
 
 # Step 2: Create Dash application
 app = Dash(__name__)
+server = app.server  # Needed by gunicorn on Render
 
 # Step 3: Define layout
 app.layout = html.Div([
